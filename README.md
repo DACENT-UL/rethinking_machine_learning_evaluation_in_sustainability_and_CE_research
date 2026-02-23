@@ -4,26 +4,22 @@ This is the Github repo which accompanies the manuscript 'Rethinking Machine Lea
 This repo contains 2 files, the purposes of which are described below.
 
 ## Irish_data.xlsx
-Irish_data.xlsx is the data used for the empirical example presented in the paper. Details of the variables are provided below (and in table 2 of the paper)
+Irish_data.xlsx is the data used for the empirical example presented in the paper. Details of the variables are provided below (and in table 2 of the paper). The lengths of the time series used from each variable was 2000-2020.
 
-Municipal Waste - kilograms per capita - from Eurostat
+Municipal Waste - kilograms per capita - from Eurostat (https://doi.org/10.2908/CEI_PC031) (note values for 2013 and 2015 are missing).
 
-General Electricity Consumption - ktoe - from the Central Statistics Office (CSO)
+GDP - constant to 2015 US$ - from the World Bank - (data id: NY.GDP.MKTP.KD)
 
-GDP - 2015 US$ - from the World Bank
+Population - people - from the World Bank - (data id: SP.POP.TOTL)
 
-Population - people - from the World Bank
-
-Unemployment - % of labour force - from the World Bank
-
-CO2 emissions - tonnes/capita - from Our World in Data
-
-Inflation - annual % change in consumer prices - from the World Bank
+Unemployment - % of labour force - from the World Bank - (data id: SL.UEM.TOTL.ZS)
 
 ## models.R
 This is the R file used for the modelling and anlaysis of the empirical example presented in the paper. This file;
 
 ->applies z score scaling to the variables in Irish_data.xlsx to prepare them for modelling
+
+->uses linear interpolation to optain estimated municipal waste values for 2013 and 2015
 
 ->fits and evaluates the mean baseline, naive baseline, support vector machine and neural network 
 
